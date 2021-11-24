@@ -152,9 +152,14 @@ h4 {
 }
 @media screen and (min-width: 768px) {
   .offer {
-    grid-template-columns: 354px 354px;
+    width: 738px;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 380px 180px;
     gap: 20px;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -223,6 +228,7 @@ h4 {
   .offer__main-title {
     text-align: left;
     font-size: 24px;
+    margin-left: 4px;
   }
 }
 
@@ -289,7 +295,7 @@ h4 {
 @media screen and (min-width: 768px) {
   .boxes__container {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 188px 188px;
+    grid-template-rows: auto auto;
     gap: 20px;
   }
 }
@@ -398,14 +404,16 @@ h4 {
 }
 @media screen and (min-width: 768px) {
   .info {
-    width: 100%;
+    width: 736px;
+    text-align: left;
   }
 }
 
-.info__main {
-  text-align: center;
+@media screen and (min-width: 768px) {
+  .info__main {
+    margin-left: 4px;
+  }
 }
-
 .info__container {
   margin-left: auto;
   margin-right: auto;
@@ -413,6 +421,11 @@ h4 {
   grid-template-columns: 440px;
   grid-template-rows: repeat(3, auto);
   row-gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .info__container {
+    grid-template-columns: 738px;
+  }
 }
 
 .info__card {
@@ -430,6 +443,7 @@ h4 {
 
 .info__title {
   margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .info__text {
@@ -447,6 +461,11 @@ h4 {
   margin-bottom: 60px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    width: 738px;
+  }
 }
 
 .footer__czechitas {
