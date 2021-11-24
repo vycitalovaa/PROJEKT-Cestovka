@@ -112,12 +112,26 @@ h4 {
     margin-bottom: 0;
     margin-top: 30px;
   }
+
+  .intro {
+    text-align: left;
+    margin-left: 3%;
+    flex: 0 1 32%;
+    margin-bottom: 0;
+  }
 }
-.intro {
-  text-align: left;
-  margin-left: 3%;
-  flex: 0 1 32%;
-  margin-bottom: 0;
+@media screen and (min-width: 960px) {
+  .navigation {
+    width: 1040px;
+  }
+  .menu {
+    flex: 0 1 42%;
+    margin-left: 28%;
+  }
+  .intro {
+    flex: 0 1 28%;
+    margin-right: 2%;
+  }
 }
 
 .offer__main {
@@ -153,6 +167,13 @@ h4 {
     margin-left: auto;
     margin-right: auto;
   }
+  @media screen and (min-width: 960px) {
+    width: 1040px;
+    height: 400px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+  }
 }
 .offer__card-main,
 .offer__card-lake,
@@ -179,6 +200,10 @@ h4 {
     grid-column: 1 /-1;
     grid-row: 1 / 2;
   }
+  @media screen and (min-width: 960px) {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+  }
 }
 
 .offer__card-lake {
@@ -188,6 +213,10 @@ h4 {
   @media screen and (min-width: 768px) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    @media screen and (min-width: 960px) {
+      grid-column: 2 / -1;
+      grid-row: 1 / 2;
+    }
   }
 }
 
@@ -197,6 +226,10 @@ h4 {
   position: relative;
   @media screen and (min-width: 768px) {
     grid-column: 2 / -1;
+    grid-row: 2 / 3;
+  }
+  @media screen and (min-width: 960px) {
+    grid-column: 2 /-1;
     grid-row: 2 / 3;
   }
 }
@@ -242,6 +275,7 @@ h4 {
   font-size: 16px;
   @media screen and (min-width: 768px) {
     font-size: 22px;
+    text-align: left;
   }
 }
 .offer__title:last-child {
