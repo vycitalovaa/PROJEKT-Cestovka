@@ -6,10 +6,14 @@ $normal: 18px;
 body {
   margin: 0;
   color: black;
-  font-family: Montserrat, alial, sans-serif;
+  font-family: Montserrat, arial, sans-serif;
   font-size: 18px;
   background-color: white;
   padding: 20px;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
 }
 h1,
 h3 {
@@ -38,16 +42,24 @@ h4 {
   font-size: 24px;
   font-weight: 600;
 }
+.navigation {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-top: 0;
+}
 
 .intro__main-title {
   margin-top: 40px;
+  text-align: center;
 }
 
 .intro {
-  margin: 0;
-  padding: 0;
   margin-bottom: 40px;
   text-align: center;
+  margin-left: 0;
 }
 
 .menu {
@@ -59,7 +71,6 @@ h4 {
   font-size: 16px;
   text-decoration: none;
   align-items: center;
-  width: 440px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -67,12 +78,12 @@ h4 {
 .menu__item {
   color: $emp;
   text-decoration: none;
-  flex: 1 1 calc((100% - 60px) / 3);
+  flex: 0 1 calc((100% - 60px) / 3);
   font-weight: 600;
   text-decoration: none;
   font-size: $normal;
   margin: 0;
-  font-size: 22px;
+  font-size: 18px;
 }
 .menu__link {
   text-decoration: none;
@@ -84,6 +95,30 @@ h4 {
   background-color: $emp;
   color: white;
 }
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 738px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  .menu {
+    flex: 0 1 60%;
+    margin-left: 5%;
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+}
+.intro {
+  text-align: left;
+  margin-left: 3%;
+  flex: 0 1 32%;
+  margin-bottom: 0;
+}
+
 .offer__main {
   text-align: center;
   margin-bottom: 20px;
@@ -282,8 +317,8 @@ h4 {
   margin-top: 40px;
   margin-bottom: 60px;
   margin-left: auto;
-  margin-right: auto;}
-  
+  margin-right: auto;
+}
 
 .footer__czechitas {
   margin: 0;
