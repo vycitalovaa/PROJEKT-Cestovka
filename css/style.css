@@ -26,6 +26,7 @@ h5 {
 
 p {
   font-size: 16px;
+  margin: 0;
 }
 
 h1 {
@@ -291,6 +292,7 @@ h4 {
   bottom: 20px;
   color: white;
   font-size: 20px;
+  text-align: left;
 }
 
 .offer__text {
@@ -308,9 +310,10 @@ h4 {
     text-align: left;
   }
 }
-
-.offer__title:last-child {
-  bottom: 5px;
+@media screen and (min-width: 960px) {
+  .offer__text {
+    bottom: 10px;
+  }
 }
 
 .boxes {
@@ -333,13 +336,23 @@ h4 {
   justify-content: center;
   align-items: center;
   margin: 0;
-  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .boxes__container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 20px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .boxes__container {
+    width: 1040px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 210px;
+    gap: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
   }
 }
 
@@ -354,17 +367,28 @@ h4 {
   margin: 0;
   justify-content: space-between;
   padding: 20px;
-  display: block;
-  text-align: center;
-  margin: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
+@media screen and (min-width: 768px) {
+  .boxes__card1,
+.boxes__card2,
+.boxes__card3,
+.boxes__card4 {
+    display: block;
+    text-align: center;
+    margin: 0;
+  }
+}
+
 .boxes__title {
   color: #f03000;
   font-size: 18px;
-  margin: 0;
+  margin: 0 0 20px 0;
   padding: 0;
+}
+@media screen and (min-width: 960px) {
+  .boxes__title {
+    font-size: 16px;
+  }
 }
 
 .boxes__text p {
@@ -374,18 +398,20 @@ h4 {
 }
 
 .boxes__img {
-  width: 40px;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .boxes__img {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 10px;
   }
 }
 .boxes__img .boxes__icon {
-  flex: 0 1 calc 20%;
-  width: 100%;
+  flex: 0 1 calc 20%-px;
+  width: 40px;
+  height: 40px;
 }
 @media screen and (min-width: 768px) {
   .boxes__img .boxes__icon {
@@ -399,10 +425,12 @@ h4 {
 .boxes__img .boxes__part {
   flex: 0 1 calc(80%);
   margin: 0;
+  padding: 0;
 }
 @media screen and (min-width: 768px) {
   .boxes__img .boxes__part {
     display: block;
+    margin-top: 10px;
   }
 }
 .boxes__img .boxes__card1 {
@@ -440,6 +468,27 @@ h4 {
   }
 }
 
+@media screen and (min-width: 960px) {
+  .boxes__card1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .boxes__card2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .boxes__card3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+
+  .boxes__card4 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+  }
+}
 .info {
   margin-left: auto;
   margin-right: auto;
